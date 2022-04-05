@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="Portfolio Yanis Legrand | Accueil">
+  <link rel="icon" href="assets/img/image.ico" type="image/x-icon" /><!-- MDB icon -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" /><!-- Font Awesome -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/projets.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="/assets/js/app.js"></script>
+  <title>Portfolio Yanis LEGRAND | Accueil</title>
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div id="left">
+      <a class="nav-link" aria-current="page" href="#">Accueil</a>
+      <a class="nav-link" href="#part2">Compétences</a>
+      <a class="nav-link" href="#part3">Projet</a>
+      <a class="nav-link" href="#part4">Veille</a>
+    </div>
+    <a class="nav-link" href="https://github.com/yaperson" id="right"><img src="/assets/img/logos/github.png"
+        alt="logo de github" class="logo-topnav"></a>
+  </nav>
+
+
+  <div class="bg-image" style="
+              background-image: url('assets/img/image1.jpg');
+              height: 100vh;
+              ">
+    <h1 id="text-white" class="text-white of">Portfolio Yanis Legrand</h1>
+    <a href="#part2">
+      <img class="logo-next" src="/assets/img/logos/next.png" alt="en savoir plus">
+    </a>
+  </div>
+
+
+  <div id="part2" class="bg-image-2" style="
+        background: linear-gradient(0deg,#5279a5, #5296A5);
+        height: 100vh;
+    ">
+    <div class="bloc1">
+      <div class="bloc1-element1">
+        <div class="element1-head">
+          <h2>Présentation</h2>
+          <img src="/assets/img/image.ico">
+          <p>Yanis Legrand, 19 ans, en recherche d'un contrat d'apprentissage pour un Bachelor IT concepteur Intégrateur
+            DevOps parcours Développement !</p>
+          <h3>Passions</h3>
+          <div class="logo-container">
+            <span class="passions">
+              Musique
+              <img class="logo-topnav" src="/assets/img/logos/music.png" alt="">
+            </span>
+            <span class="passions">
+              Programmation
+              <img class="logo-topnav" src="/assets/img/logos/dev.png" alt="">
+            </span>
+            <span class="passions">
+              automobile
+              <img class="logo-topnav" src="/assets/img/logos/automobile.png" alt="">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="bloc1-element1">
+        <h2>Veille</h2>
+        <a href="/veille.html">
+          <img src="/assets/img/PWA.png" alt="logo pwa" width="100px">
+        </a>
+        <p>
+          L'utilisation des progressives web apps est pour moi une bonne manière pour rendre mes application web
+          accessible partout, vous devriez essayer, c'est facile a mettre en place !
+        </p>
+        <h3>Projets PWA</h3>
+        <a class="text-dark" href="https://veille-yanislegrand.alwaysdata.net/">Flux rss pour ma veille</a>
+        <a class="text-dark" href="https://yaperson.alwaysdata.net/musique/">Mon lecteur de musique</a>
+      </div>
+    </div>
+    <div class="bloc2">
+      <h2>Techno</h2>
+      <div class="bloc2-container">
+        <img class="logo-tech" src="/assets/img/logos/js-logo.png" alt="logo javascript">
+        <img class="logo-tech" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
+        <img class="logo-tech" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+        <img class="logo-tech" src="/assets/img/logos/Node.js_logo.png" alt="logo Node.js">
+        <img class="logo-tech" src="/assets/img/logos/symfony.png" alt="logo symfony">
+        <img class="logo-tech" src="/assets/img/logos/csharp.png" alt="logo c#">
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div id="part3" class="bg-image-3" style="
+            background: linear-gradient(0deg,#4a5aa5, #5279a5);
+            height: 100vh;
+            ">
+
+    <div class="topTitle">
+      <h1 id="text-white" class="text-white of">Projets</h1>
+    </div>
+    <div class="main">
+      <div class="card">
+        <div class="element1-head">
+          <h2>FeedBack - Self</h2>
+          <p>FeedBack - Self est un logiciel métier de notation du self. Il permet de récolter, grâce à un système de
+            notation simple des avis. A l’aide d’un panel administrateur munis des informations essentiels, retranscris
+            dans les tableaux et graphiques mis à votre disposition dans un objectif de productivité.</p>
+          <h3>Techno utilisés</h3>
+          <img class="logo-tech-projet" src="/assets/img/logos/symfony.png" alt="logo symfony">
+          <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
+          <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+        </div>
+      </div>
+      <div class="card">
+        <div class="element1-head">
+          <h2>Flux RSS</h2>
+          <p>Ce projet est une PWA qui récupère des flux RSS grâce à node.js
+            cela me permet de réaliser une veille simple et efficace (tout dépend du flux rss choisi).
+            ayant eu énormément de problèmes à déployer le projet, cela a été pour moi un moyen d'en apprendre beaucoup
+            sur node.</p>
+          <h3>Techno utilisés</h3>
+          <img class="logo-tech-projet" src="/assets/img/logos/Node.js_logo.png" alt="logo Node.js">
+          <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
+          <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+          <img class="logo-tech-projet" src="/assets/img/logos/js-logo.png" alt="logo javascript">
+        </div>
+      </div>
+      <div class="card">
+        <div class="element1-head">
+          <h2>WeekSong</h2>
+          <p>Une playlist, une semaine, c'est un lecteur audio fait en JS, basé sur celui de HTML5.
+            Il y a un principe de boucle avec un titre et des images associé les un des autres et une barre de
+            progression
+            synchronisé avec la musique.
+            La prochaine étape est d'en faire une Progressive Web App !</p>
+          <h3>Techno utilisés</h3>
+          <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
+          <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+          <img class="logo-tech-projet" src="/assets/img/logos/js-logo.png" alt="logo javascript">
+        </div>
+      </div>
+      <div class="card">
+        <div class="element1-head">
+          <h2>Jette Moi Un Regard</h2>
+          <p>L’association JETTE MOI UN REGARD a été créée pour aider les personnes
+            qui n’ont pas d’aide des services administratifs,
+            l’association aide toute sorte d’handicap.
+            N'ayant pas de site web, je me suis porter volontaire pour en crée un bénévolement.</p>
+          <h3>Techno utilisés</h3>
+          <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
+          <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="bg-light text-center text-lg-start">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5 class="text-uppercase">Contact</h5>
+          <div class="foo-span" id="contact">
+            <span> Envoyer un mail :<a href="mailto:yanis.legrand.1@gmail.com"> yanis.legrand.1@gmail.com</a></span>
+            <span> téléphone : 07 81 36 40 05 </span>
+            <span> GitHub : <a href="https://github.com/yaperson">yaperson</a></span>
+          </div>
+          <h5 class="text-uppercase">Parametres</h5>
+          <button class="" id="toggleNeon" onclick="NeonState()"> Titre néon </button>
+        </div>
+        <div class="col">
+          <h5 class="text-uppercase">Navigation</h5>
+          <a href="index.html" class="text-dark"> Accueil </a>
+          <a href="cv.html" class="text-dark"> CV </a>
+          <a href="Competences.html" class="text-dark"> Compétences </a>
+          <a href="projets.html" class="text-dark"> Projets </a>
+          <a href="Documentation.html" class="text-dark"> Documentations </a>
+          <a href="veille.html" class="text-dark"> Veille </a>
+        </div>
+        <div class="col">
+          <h5 class="text-uppercase mb-0">Projets</h5>
+          <a href="https://yaperson.github.io/Jette-moi-un-regard/" class="text-dark">Jette Moi Un Regard</a>
+          <a href="https://yaperson.alwaysdata.net/vue/#/" class="text-dark">Vue.js</a>
+          <a href="https://yaperson.alwaysdata.net/contact/index.html" class="text-dark">Contact & connection</a>
+        </div>
+      </div>
+    </div>
+    <div class="legal-part" style="background-color: rgba(0, 0, 0, 0.2);">
+      Portfolio Yanis Legrand
+      <a class="text-dark" href="mention.html">Mention légales</a>
+    </div>
+  </footer>
+
+
+  <script>
+    toggleNeon = document.getElementById('toggleNeon')
+    Neon = document.getElementById('text-white')
+    NeonOn = false
+
+    function NeonState() {
+      if (NeonOn == true) {
+        NeonOn = false
+        Neon.classList.remove('on')
+        Neon.classList.add('of')
+        toggleNeon.classList.remove('toggleOn')
+      }
+      else {
+        NeonOn = true
+        Neon.classList.add('on')
+        Neon.classList.remove('of')
+        toggleNeon.classList.add('toggleOn')
+      }
+    }
+  </script>
+  <script>
+    navbar = document.getElementById("navbar")
+    // if (scrollX = 10)
+  </script>
+
+</body>
+
+</html>

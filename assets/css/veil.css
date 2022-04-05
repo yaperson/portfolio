@@ -1,0 +1,39 @@
+/********************************/
+/**   Text dans section, veil  */
+/******************************/
+  .imgPwa{
+    margin: 10%;
+    position: relative;
+  }
+  .imgPwa2{
+    position: relative;
+    float: right;
+    max-height: 300px;
+  }
+  .Para-text{
+    margin: 8%;
+  }
+  
+  .card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    padding: 3%;
+    margin: 3%;
+  
+  }
+  
+  .card__news{
+    background-color: #DDC8C4;
+    padding: 10px;
+    border-radius: 5%;
+    transition: 0.2s;
+    margin: 3%;
+    box-shadow: 0 3px 6px 0 #36382E;
+  }    
+  .card__news:hover{
+    transition: 0.2s;
+    border-radius: 0%;
+  }

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Portfolio Yanis Legrand | Ma Veille technologique sur les PWA">
+    <link rel="icon" href="assets/img/image.ico" type="image/x-icon" /><!-- MDB icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" /><!-- Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" /><!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/veille.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> intégre de Vue.js  -->
+    <!-- <script src="assets/js/vue.js"></script> -->
+        <!--        PWA         -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="black">
+        <meta name="apple-mobile-web-app-status-bar" content="white">
+        <link rel="manifest" href="./manifest.json">
+        <link rel="apple-touch-icon" href="assets/img/image.ico">
+    <title>Portfolio Yanis LEGRAND | Ma Veille</title>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+        <a class="nav-link" href="cv.html">CV</a>
+        <a class="nav-link" href="Competences.html">Compétences</a>
+        <a class="nav-link" href="projets.html">Projet</a>
+        <a class="nav-link" href="Documentation.html">Documentations</a>
+        <a class="nav-link" href="veille.html">Veille</a>
+    </nav>
+    <!-- Navbar -->
+
+      <!-- Background image  d-flex justify-content-center align-items-center -->
+      <div
+      class="bg-image "
+      style="
+              background-image: url('assets/img/vue-back.jpg');
+              height: 50vh;
+              "
+      >
+      <img src="assets/img/PWA.png" alt="Logo pwa" height="80%" width="80%" class="imgPwa" id="img-PWA">
+    </div>
+
+      <!-- Background image -->
+    </header>
+
+  <main>
+    <div class="bloc">
+      <h2>Qu'est-ce qu'une Progressive Web App ?</h2>
+      <img src="assets/img/PWA-1.PNG" alt="" class="imgPwa2">
+      <p>
+        Une Progressive Web App n'est pas une technologie, c’est un terme marketing pour décrire un site web moderne qui a pris toutes les bonnes vitamines. <br>
+        Un site web moderne qui commence sa vie dans un navigateur classique et qui finit sur l’écran d’accueil à peu près au même rang qu’une app native. <br>
+        L'objectif est d'avoir les avantages d'une application native et l'accessibilité d'une application web.
+      </br>
+      </br>
+        Comme on peut le remarquer une application native à plus de capacité, tandis qu'une application web touche plus de monde.
+        Une Progressive Web App, permet d'avoir un peu des deux, et donc cela permet une meilleure expérience utilisateur.
+      </br>
+      </br>
+              Affin qu'un site ou une application web puisse être une PWA, il faut <br>
+      qu’elle soit responsive, accessible hors connexion et installable sur le bureau ou l'écran d’accueil de l'appareil
+      </br>
+      </br>
+      <img src="assets/img/lighthouse.PNG" alt="" class="imgPwa2">
+      </br>
+      </br>
+        Tout se base sur les Services Workers.
+        Il faut voir le service workers comme un proxy programmable qui est dans le navigateur et va intercepter les requêtes qu’il y à entre vos pages et votre serveur, et qui à son propre cache.
+      </br>
+    </br>
+      <img src="assets/img/serviceworker.PNG" alt="" class="imgPwa2">
+    </div>
+     
+    <div class="bloc news">
+      <h2>News</h2>
+      <div class="card">
+        <span class="card_title">Mon app de veille !</span>
+        <span class="card_line"></span>
+        <p class="card_description">
+          Pour optimiser ma veille technologique, je me suis fait une app avec Node.js (express, rss-parser). J'y ai mis différent flux rss qui m'interesse. <br>
+          ATENTION ! il faut cependant trier les informations et faire attention a leur source (surtout les flux de Google alert)
+        </p>
+        <a href="https://veille-yanislegrand.alwaysdata.net/" target="_blanc">see more -></a>
+        <span class="card_date">03/01/2022</span>
+      </div>
+      <div class="card">
+        <span class="card_title">How can a PWA benefit small to medium-sized B2B companies ?</span>
+        <span class="card_line"></span>
+        <p class="card_description">Progressive Web Apps became popular when companies like Instagram and Spotify migrated to PWAs and reported benefits in user engagements. So now, what can a PWA do for the minor-sized B2B focused companies?
+
+          Most businesses have touchpoints with clients, consumers, or service providers in their daily business. There might be a classical website or web portal to stay in touch. They may already think about transforming analog processes into automated ones, providing an Android or iOS app for customers or partners. But supplying and maintaining the website and apps for cross-platform simultaneously is a time-consuming and costly effort.
+        </p>
+        <a href="https://www.linkedin.com/pulse/progressive-web-apps-key-technology-digital-b2b-adrian-stanek" target="_blanc">see more -></a>
+        <span class="card_date">Dec 23, 2021</span>
+      </div>
+      <div class="card">
+        <span class="card_title">ES modules in service workers</span>
+        <span class="card_line"></span>
+        <p class="card_description">ES modules have been a developer favorite for a while now. In addition to a number of other benefits, they offer the promise of a universal module format where shared code can be released once and run in browsers and in alternative runtimes like Node.js. While all modern browsers offer some ES module support, they don't all offer support everywhere that code can be run. Specifically, support for importing ES modules inside of a browser's service worker is just starting to become more widely available.
+
+          This article details the current state of ES module support in service workers across common browsers, along with some gotchas to avoid, and best practices for shipping backwards-compatible service worker code.</p>
+          <a href="https://web.dev/es-modules-in-sw/" target="_blanc">see more -></a>
+          <span class="card_date">May 13, 2021</span>
+      </div>
+      <div class="card">
+        <span class="card_title">Rakuten 24’s investment in PWA increases user retention by 450%</span>
+        <span class="card_line"></span>
+        <p class="card_description">Rakuten 24 is an online store provided by Rakuten, one of the largest e-commerce companies in Japan. It provides a wide selection of everyday items including grocery, medicine, healthcare, kitchen utensils, and more. The team's main goal over the last year was to improve mobile customer retention and re-engagement. By making their web app installable, they saw a 450% jump in visitor retention rate as compared to the previous mobile web flow over a 1-month timeframe.
+        </p>
+        <a href="https://web.dev/rakuten-24/" target="_blanc">see more -></a>
+        <span class="card_date">Nov 17, 2020</span>
+      </div>
+    </div>
+  </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col">
+            <h5 class="text-uppercase">Contact</h5>
+    
+            <div class="foo-span">
+              <span> Envoyer un mail :<a href="mailto:yanis.legrand@ik.me"> yanis.legrand@ik.me</a></span>
+              <span> téléphone : 07 81 36 40 05 </span>
+              <span> GitHub : <a href="https://github.com/yaperson">yaperson</a></span>
+            </div>
+    
+            <h5 class="text-uppercase">Parametres</h5>
+             <button class="" id="toggleNeon" onclick="NeonState()"> Titre néon </button>
+    
+          </div>
+          <!--Grid column-->
+    
+      <!--Grid column-->
+      <div class="col">
+        <h5 class="text-uppercase">Navigation</h5>
+            <a href="index.html" class="text-dark"> Accueil </a>
+            <a href="cv.html" class="text-dark"> CV </a>
+            <a href="Competences.html" class="text-dark"> Compétences </a>
+            <a href="projets.html" class="text-dark"> Projets </a>
+            <a href="Documentation.html" class="text-dark"> Documentations </a>
+            <a href="veille.html" class="text-dark"> Veille </a>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col">
+        <h5 class="text-uppercase mb-0">Projets</h5>
+        <a href="https://yaperson.alwaysdata.net/musique/" class="text-dark">WeekSong</a>
+        <a href="https://veille-yanislegrand.alwaysdata.net/" class="text-dark">Veille PWA</a>
+        <a href="https://yaperson.github.io/Jette-moi-un-regard/" class="text-dark">Jette Moi Un Regard</a>
+        <a href="https://yaperson.alwaysdata.net/vue/#/" class="text-dark">Vue.js</a>
+      </div>
+      <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Copyright -->
+      <div class="legal-part" style="background-color: rgba(0, 0, 0, 0.2);">
+        Portfolio Yanis Legrand
+        <a class="text-dark" href="mention.html">Mention légales</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+<!-- Footer -->
+
+    <script>
+      // effet parallax
+    let PWA = document.getElementById("img-PWA");
+    window.addEventListener('scroll', function(){
+        var value = window.scrollY;
+
+        PWA.style.top = value * -1 + 'px';
+    })
+    </script>
+    <script>
+      toggleNeon = document.getElementById('toggleNeon')
+      Neon = document.getElementById('text-white')
+      NeonOn = null
+    
+      function NeonState(){
+        if (NeonOn == true){
+          NeonOn = false
+          Neon.classList.remove('on')
+          Neon.classList.add('of')
+          toggleNeon.classList.remove('toggleOn')
+        }
+        else {
+          NeonOn = true
+          Neon.classList.add('on')
+          Neon.classList.remove('of')          
+          toggleNeon.classList.add('toggleOn')
+        }
+      }
+    </script>
+  </body>
+</html>

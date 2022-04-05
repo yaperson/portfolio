@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, sans-serif;
+    color: white;
+}
+#canvas1{
+    border:solid 1px red; 
+    margin-left: 35%;
+    margin-right: 35%;
+}
+#bg{
+    background: linear-gradient(black,grey);
+    bottom:0;
+    left:-50%;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+.bg1{
+    animation: bg1 infinite;
+}
+
+
+
+@keyframes bg1 {
+
+    0%{
+    background: linear-gradient(black,rgb(180, 180, 180));
+    bottom:0;
+    left:-50%;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+    transition: 0.5s;
+    }
+    100%{
+    transition: 0.5s;
+    background: linear-gradient(rgb(19, 19, 19),grey);
+    bottom:0;
+    left:-50%;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+        }
+}

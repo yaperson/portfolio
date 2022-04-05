@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="Portfolio Yanis Legrand | Mes Projets">
+  <link rel="icon" href="assets/img/image.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" /><!-- Font Awesome -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" /><!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/projets.css">
+  <title>Portfolio Yanis LEGRAND | Mes Projets</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div id="left">
+        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+        <a class="nav-link" href="cv.html">CV</a>
+        <a class="nav-link" href="Competences.html">Compétences</a>
+        <a class="nav-link" href="projets.html">Projet</a>
+        <a class="nav-link" href="Documentation.html">Documentations</a>
+        <a class="nav-link" href="veille.html">Veille</a>
+      </div>
+        <a class="nav-link" href="https://github.com/yaperson" id="right"><img src="/assets/img/logos/github.png" alt="logo de github" class="logo-topnav"></a>
+    </nav>
+    <div class="bg-image " style="
+              background-image: url('assets/img/image1.jpg');
+              height: 50vh;
+              ">
+      <h1 id="text-white" class="text-white text-white2 of">Mes projets</h1>
+    </div>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <a id="card-link" href="https://veille-yanislegrand.alwaysdata.net/">Flux RSS</a>
+      <div class="description">
+        <p>Ce projet est une PWA qui récupère des flux RSS grâce à node.js
+          cela me permet de réaliser une veille simple et efficace (tout dépend du flux rss choisi).
+          ayant eu énormément de problèmes à déployer le projet, cela a été pour moi un moyen d'en apprendre beaucoup sur node.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a id="card-link" href="https://yaperson.alwaysdata.net/musique/">Une playlist, une semaine</a>
+      <div class="description">
+        <p>Une playlist, une semaine, c'est un lecteur audio fait en JS, basé sur celui de HTML5.
+          Il y a un principe de boucle avec un titre et des images associé les un des autres et une barre de progression
+          synchronisé avec la musique.
+          La prochaine étape est d'en faire une Progressive Web App !
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a id="card-link" href="assets/jeux/index.html">casse brique</a>
+      <div class="description">
+        <p>Un casse brique, c'est parfait pour débuter en JS !</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a id="card-link" href="https://test-yanis.000webhostapp.com/">Jette Moi Un Regard</a>
+      <div class="description">
+        <p>L’association JETTE MOI UN REGARD a été créée pour aider les personnes
+          qui n’ont pas d’aide des services administratifs,
+          l’association aide toute sorte d’handicap.
+          N'ayant pas de site web, je me suis porter volontaire pour en crée un bénévolement.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-light text-center text-lg-start">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h5 class="text-uppercase">Contact</h5>
+
+          <div class="foo-span">
+            <span> Envoyer un mail :<a href="mailto:yanis.legrand.1@gmail.com"> yanis.legrand.1@gmail.com</a></span>
+            <span> téléphone : 07 81 36 40 05 </span>
+            <span> GitHub : <a href="https://github.com/yaperson">yaperson</a></span>
+          </div>
+
+          <h5 class="text-uppercase">Parametres</h5>
+          <button class="" id="toggleNeon" onclick="NeonState()"> Titre néon </button>
+
+        </div>
+        <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col">
+        <h5 class="text-uppercase">Navigation</h5>
+            <a href="index.html" class="text-dark"> Accueil </a>
+            <a href="cv.html" class="text-dark"> CV </a>
+            <a href="Competences.html" class="text-dark"> Compétences </a>
+            <a href="projets.html" class="text-dark"> Projets </a>
+            <a href="Documentation.html" class="text-dark"> Documentations </a>
+            <a href="veille.html" class="text-dark"> Veille </a>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col">
+        <h5 class="text-uppercase mb-0">Projets</h5>
+            <a href="https://yaperson.github.io/Jette-moi-un-regard/" class="text-dark">Jette Moi Un Regard</a>
+            <a href="https://yaperson.alwaysdata.net/vue/#/" class="text-dark">Vue.js</a>
+            <a href="https://yaperson.alwaysdata.net/contact/index.html" class="text-dark">Contact & connection</a>
+      </div>
+      <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Copyright -->
+    <div class="legal-part" style="background-color: rgba(0, 0, 0, 0.2);">
+      Portfolio Yanis Legrand
+      <a class="text-dark" href="mention.html">Mention légales</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <script>
+    toggleNeon = document.getElementById('toggleNeon')
+    Neon = document.getElementById('text-white')
+    NeonOn = true
+
+    function NeonState() {
+      if (NeonOn == true) {
+        NeonOn = false
+        Neon.classList.remove('on')
+        Neon.classList.add('of')
+        toggleNeon.classList.remove('toggleOn')
+      }
+      else {
+        NeonOn = true
+        Neon.classList.add('on')
+        Neon.classList.remove('of')
+        toggleNeon.classList.add('toggleOn')
+      }
+    }
+  </script>
+</body>
+
+</html>

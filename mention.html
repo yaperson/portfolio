@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="Portfolio Yanis Legrand | Mentions légales">
+    <link rel="icon" href="assets/img/image.ico" type="image/x-icon" /><!-- MDB icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" /><!-- Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" /><!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Portfolio Yanis LEGRAND | Mentions légales</title>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+        <a class="nav-link" href="cv.html">CV</a>
+        <a class="nav-link" href="Competences.html">Compétences</a>
+        <a class="nav-link" href="projets.html">Projet</a>
+        <a class="nav-link" href="Documentation.html">Documentations</a>
+        <a class="nav-link" href="veille.html">Veille</a>
+    </nav>
+    <!-- Navbar -->
+
+      <!-- Background image -->
+      <div
+      class="bg-image d-flex justify-content-center align-items-center"
+      style="
+              background-image: url('assets/img/image1.jpg');
+              height: 100vh;
+              "
+      >
+      <h1 id="text-white" class="text-white of" style="padding: 3%;">Portfolio Yanis Legrand</h1>
+      </div>
+      <aside class="mention" style="text-align: left;">
+        <p style="font-size: 80%;">
+            MENTIONS LEGALES : <br>
+
+            Conformément aux dispositions des articles 6-III et 19 de la Loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'économie numérique, dite L.C.E.N., nous portons à la connaissance des utilisateurs et visiteurs du site : yanislegrand.000webhostapp.com les informations suivantes :
+            <br><br>
+            Informations légales : <br><br>
+
+            Statut du propriétaire : particulier<br>
+            Le Propriétaire est : yanis Legrand<br>
+            Adresse postale du propriétaire : 17 LIEU DIT LA POULDAIS 22100 trélivan<br>
+            
+            Le Créateur du site est : yanis Legrand<br>
+            Le Responsable de la  publication est : yanis Legrand<br>
+            Contacter le responsable de la publication : <a href="mailto:yanis.legrand.1@gmail.com"> yanis.legrand.1@gmail.com</a>
+            Le responsable de la publication est une personne physique<br>
+
+            Le Webmaster est  : yanis Legrand<br>
+            Contacter le Webmaster :  <a href="mailto:yanis.legrand.1@gmail.com"> yanis.legrand.1@gmail.com</a><br>
+            L’hebergeur du site est : 000webhost 61 Lordou Vironos str., 6023 Larnaca, Cyprus 6023
+        </p>
+        <h5 class="text-uppercase">Parametres</h5>
+        <button class="toggleOn" id="toggleNeon" onclick="NeonState()"> Titre néon </button>
+      </aside>
+    </div>
+      <!-- Background image -->
+    </header>
+<!-- Footer -->
+
+  <script>
+    toggleNeon = document.getElementById('toggleNeon')
+    Neon = document.getElementById('text-white')
+    NeonOn = true
+
+    function NeonState(){
+      if (NeonOn == true){
+        NeonOn = false
+        Neon.classList.remove('on')
+        Neon.classList.add('of')
+        toggleNeon.classList.remove('toggleOn')
+      }
+      else {
+        NeonOn = true
+        Neon.classList.add('on')
+        Neon.classList.remove('of')          
+        toggleNeon.classList.add('toggleOn')
+      }
+    }
+  </script>
+  </body>
+</html>

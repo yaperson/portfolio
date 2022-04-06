@@ -18,17 +18,19 @@
 </head>
 
 <body>
+  <div class="navContainer">
+    <nav class="navbar" id="navbar">
+      <div id="left">
+        <a class="nav-link" aria-current="page" href="#">Accueil</a>
+        <a class="nav-link" href="#part2">Compétences</a>
+        <a class="nav-link" href="#part3">Projet</a>
+        <a class="nav-link" href="#part4">Veille</a>
+      </div>
+      <a class="nav-link" href="https://github.com/yaperson" id="right"><img src="/assets/img/logos/github.png"
+          alt="logo de github" class="logo-topnav"></a>
+    </nav>
+  </div>
 
-  <nav class="navbar" id="navbar">
-    <div id="left">
-      <a class="nav-link" aria-current="page" href="#">Accueil</a>
-      <a class="nav-link" href="#part2">Compétences</a>
-      <a class="nav-link" href="#part3">Projet</a>
-      <a class="nav-link" href="#part4">Veille</a>
-    </div>
-    <a class="nav-link" href="https://github.com/yaperson" id="right"><img src="/assets/img/logos/github.png"
-        alt="logo de github" class="logo-topnav"></a>
-  </nav>
 
 
   <div class="bg-image" style="
@@ -223,7 +225,30 @@
   </script>
   <script>
     navbar = document.getElementById("navbar")
-    // if (scrollX = 10)
+
+    window.onscroll = function (e) {
+      var distanceScrolled = document.documentElement.scrollTop
+      let screenLog = document.querySelector('body');
+
+      if (distanceScrolled > 20) {
+        navbar.classList.add("navbar-glass")
+        console.log("ok")
+      }
+      else {
+        navbar.classList.remove("navbar-glass")
+        document.addEventListener('mousemove', logKey);
+      }
+    }
+
+    function logKey(e) {
+      var distanceScrolled = document.documentElement.scrollTop
+      if (e.clientY < 80 || distanceScrolled == 0) {
+        navbar.style.top = "0px";
+      } else {
+        navbar.style.top = "-70px";
+      }
+    }
+
   </script>
 
 </body>

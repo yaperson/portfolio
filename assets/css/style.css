@@ -35,6 +35,12 @@ html {
 }
 
 /* Nav */
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar{
   position: fixed;
   display: flex;
@@ -45,6 +51,7 @@ html {
   z-index: 100;
   background-color: var(--background-color);
   box-shadow: 0px 0px 12px 0px rgba(133, 133, 133, 0.397);
+  transition: 0.2s;
 }
 .nav-link {
   text-decoration: none;
@@ -54,6 +61,17 @@ html {
   padding: 14px 16px;
   font-size: 17px;
 }
+
+.navbar-glass {
+  width: 600px;
+  border-radius: 15px;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.445);
+  backdrop-filter: blur(30px);
+  transition: 0.2s;
+  color: white;
+}
+
 #left {
   position: fixed;
   display: flex;
@@ -131,6 +149,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
+  box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.233);
 }
 
 .bg-image-2{
@@ -141,9 +160,20 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  box-shadow: inset 0px 0px 13px 6px rgba(0, 0, 0, 0.233);
+  /* box-shadow: inset 0px 0px 13px 6px rgba(0, 0, 0, 0.233); */
   padding-top:  50px;
 }
+
+.bg-image-3{
+  display: flex; 
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
 .bloc1 {
   width: 100%;
   display: flex;

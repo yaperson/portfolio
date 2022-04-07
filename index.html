@@ -26,8 +26,8 @@
         <a class="nav-link" href="#part3">Projet</a>
         <a class="nav-link" href="#part4">Veille</a>
       </div>
-      <a class="nav-link" href="https://github.com/yaperson" id="right"><img src="/assets/img/logos/github.png"
-          alt="logo de github" class="logo-topnav"></a>
+      <a class="nav-link" href="https://github.com/yaperson" id="right" target="_blanc"><img
+          src="/assets/img/logos/github.png" alt="logo de github" class="logo-topnav"></a>
     </nav>
   </div>
 
@@ -44,10 +44,7 @@
   </div>
 
 
-  <div id="part2" class="bg-image-2" style="
-        background: linear-gradient(0deg,#5279a5, #5296A5);
-        height: 100vh;
-    ">
+  <div id="part2" class="bg-image-2">
     <div class="bloc1">
       <div class="bloc1-element1">
         <div class="element1-head">
@@ -74,7 +71,7 @@
       </div>
       <div class="bloc1-element1">
         <h2>Veille</h2>
-        <a href="/veille.html">
+        <a href="/veille.html" aria-labelledby="article sur les progressive web app">
           <img src="/assets/img/PWA.png" alt="logo pwa" width="100px">
         </a>
         <p>
@@ -101,11 +98,7 @@
   </div>
 
 
-  <div id="part3" class="bg-image-3" style="
-            background: linear-gradient(0deg,#4a5aa5, #5279a5);
-            height: 100vh;
-            ">
-
+  <div id="part3" class="bg-image-3">
     <div class="topTitle">
       <h1 id="text-white" class="text-white of">Projets</h1>
     </div>
@@ -120,6 +113,11 @@
           <img class="logo-tech-projet" src="/assets/img/logos/symfony.png" alt="logo symfony">
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+
+          <div class="skillsJs">
+            <div class="Skill__progress" style="max-width: 100%; width: 75px;"></div>
+            <div class="Skill__bar"></div>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -134,6 +132,11 @@
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
           <img class="logo-tech-projet" src="/assets/img/logos/js-logo.png" alt="logo javascript">
+
+          <div class="skillsJs">
+            <div class="Skill__progress" style="max-width: 100%; width: 87px;"></div>
+            <div class="Skill__bar"></div>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -148,6 +151,11 @@
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
           <img class="logo-tech-projet" src="/assets/img/logos/js-logo.png" alt="logo javascript">
+
+          <div class="skillsJs">
+            <div class="Skill__progress" style="max-width: 100%; width: 65px;"></div>
+            <div class="Skill__bar"></div>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -160,6 +168,11 @@
           <h3>Techno utilisés</h3>
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+
+          <div class="skillsJs">
+            <div class="Skill__progress" style="max-width: 100%; width: 45px;"></div>
+            <div class="Skill__bar"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -230,13 +243,17 @@
       var distanceScrolled = document.documentElement.scrollTop
       let screenLog = document.querySelector('body');
 
-      if (distanceScrolled > 20) {
-        navbar.classList.add("navbar-glass")
-        console.log("ok")
-      }
-      else {
-        navbar.classList.remove("navbar-glass")
-        document.addEventListener('mousemove', logKey);
+      if (window.screen.width < 750) {
+        if (distanceScrolled > 20) {
+          navbar.classList.add("navbar-glass")
+        } else { navbar.classList.remove("navbar-glass") }
+      } else {
+        if (distanceScrolled > 20) {
+          navbar.classList.add("navbar-glass")
+        } else {
+          navbar.classList.remove("navbar-glass")
+          document.addEventListener('mousemove', logKey)
+        }
       }
     }
 

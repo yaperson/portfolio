@@ -23,7 +23,7 @@
       <div id="left">
         <a class="nav-link" aria-current="page" href="#">Accueil</a>
         <a class="nav-link" href="#part2">Compétences</a>
-        <a class="nav-link" href="#part3">Projet</a>
+        <a class="nav-link" href="#part3">Projets</a>
         <a class="nav-link" href="#part4">Veille</a>
       </div>
       <a class="nav-link" href="https://github.com/yaperson" id="right" target="_blanc"><img
@@ -69,18 +69,18 @@
           </div>
         </div>
       </div>
-      <div class="bloc1-element1">
+      <div class="bloc1-element1" id="veilleList">
         <h2>Veille</h2>
         <a href="/veille.html" aria-labelledby="article sur les progressive web app">
           <img src="/assets/img/PWA.png" alt="logo pwa" width="100px">
         </a>
         <p>
-          L'utilisation des progressives web apps est pour moi une bonne manière pour rendre mes application web
-          accessible partout, vous devriez essayer, c'est facile a mettre en place !
+          L'utilisation des Progressives Web Apps est pour moi une bonne manière pour rendre mes application Web
+          accessibles partout, vous devriez essayer, c'est facile à mettre en place !
         </p>
         <h3>Projets PWA</h3>
-        <a class="text-dark" href="https://veille-yanislegrand.alwaysdata.net/">Flux rss pour ma veille</a>
-        <a class="text-dark" href="https://yaperson.alwaysdata.net/musique/">Mon lecteur de musique</a>
+        <a class="text-dark" target="_blanc" href="https://veille-yanislegrand.alwaysdata.net/">Flux rss pour ma veille</a>
+        <a class="text-dark" target="_blanc" href="https://yaperson.alwaysdata.net/musique/">Mon lecteur de musique</a>
       </div>
     </div>
     <div class="bloc2">
@@ -107,17 +107,40 @@
         <div class="element1-head">
           <h2>FeedBack - Self</h2>
           <p>FeedBack - Self est un logiciel métier de notation du self. Il permet de récolter, grâce à un système de
-            notation simple des avis. A l’aide d’un panel administrateur munis des informations essentiels, retranscris
+            notation simple des avis. A l’aide d’un panel administrateur munis des informations essentielles, retranscris
             dans les tableaux et graphiques mis à votre disposition dans un objectif de productivité.</p>
-          <h3>Techno utilisés</h3>
+          <h3>Techno utilisées</h3>
           <img class="logo-tech-projet" src="/assets/img/logos/symfony.png" alt="logo symfony">
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
 
+          <h3>Avancement</h3>
           <div class="skillsJs">
-            <div class="Skill__progress" style="max-width: 100%; width: 75px;"></div>
+            <div class="Skill__progress" id="feedBackSelf"></div>
             <div class="Skill__bar"></div>
           </div>
+          <!-- TODO -->
+          <!-- AJOUTER DOCUMENTATION -->
+        </div>
+      </div>
+      <div class="card">
+        <div class="element1-head">
+          <h2>NoteListe</h2>
+          <p>NoteListe est un projet entamé récemment, donc peu avancé. C'est une appli Web de prise de notes en client Web, 
+            les notes sont enregistrées sur un serveur et liées à un utilisateur en base de données.</p>
+          <h3>Techno utilisées</h3>
+          <img class="logo-tech-projet" src="/assets/img/logos/Node.js_logo.png" alt="logo Node.js">
+          <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
+          <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
+          <img class="logo-tech-projet" src="/assets/img/logos/js-logo.png" alt="logo javascript">
+
+          <h3>Avancement</h3>
+          <div class="skillsJs">
+            <div class="Skill__progress" id="ntList"></div>
+            <div class="Skill__bar"></div>
+          </div>
+          <!-- TODO -->
+          <!-- AJOUTER DOCUMENTATION -->
         </div>
       </div>
       <div class="card">
@@ -126,15 +149,16 @@
           <p>Ce projet est une PWA qui récupère des flux RSS grâce à node.js
             cela me permet de réaliser une veille simple et efficace (tout dépend du flux rss choisi).
             ayant eu énormément de problèmes à déployer le projet, cela a été pour moi un moyen d'en apprendre beaucoup
-            sur node.</p>
-          <h3>Techno utilisés</h3>
+            sur Node.js.</p>
+          <h3>Techno utilisées</h3>
           <img class="logo-tech-projet" src="/assets/img/logos/Node.js_logo.png" alt="logo Node.js">
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
           <img class="logo-tech-projet" src="/assets/img/logos/js-logo.png" alt="logo javascript">
 
+          <h3>Avancement</h3>
           <div class="skillsJs">
-            <div class="Skill__progress" style="max-width: 100%; width: 87px;"></div>
+            <div class="Skill__progress" id="rss"></div>
             <div class="Skill__bar"></div>
           </div>
         </div>
@@ -143,17 +167,17 @@
         <div class="element1-head">
           <h2>WeekSong</h2>
           <p>Une playlist, une semaine, c'est un lecteur audio fait en JS, basé sur celui de HTML5.
-            Il y a un principe de boucle avec un titre et des images associé les un des autres et une barre de
+            Il y a un principe de boucle avec un titre et des images associés les une des autres et une barre de
             progression
-            synchronisé avec la musique.
-            La prochaine étape est d'en faire une Progressive Web App !</p>
-          <h3>Techno utilisés</h3>
+            synchronisée avec la musique.</p>
+          <h3>Techno utilisées</h3>
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
           <img class="logo-tech-projet" src="/assets/img/logos/js-logo.png" alt="logo javascript">
-
+          
+          <h3>Avancement</h3>
           <div class="skillsJs">
-            <div class="Skill__progress" style="max-width: 100%; width: 65px;"></div>
+            <div class="Skill__progress" id="WeekSong"></div>
             <div class="Skill__bar"></div>
           </div>
         </div>
@@ -162,22 +186,27 @@
         <div class="element1-head">
           <h2>Jette Moi Un Regard</h2>
           <p>L’association JETTE MOI UN REGARD a été créée pour aider les personnes
-            qui n’ont pas d’aide des services administratifs,
-            l’association aide toute sorte d’handicap.
-            N'ayant pas de site web, je me suis porter volontaire pour en crée un bénévolement.</p>
+            qui n’ont pas d’aide des services administratifs.
+            l’association aide toute sortes d’handicapes.
+            N'ayant pas de site Web, je me suis porté volontaire pour en créé un bénévolement.</p>
           <h3>Techno utilisés</h3>
           <img class="logo-tech-projet" src="/assets/img/logos/CSS3_logo.png" alt="logo css">
           <img class="logo-tech-projet" src="/assets/img/logos/HTML5_logo.png" alt="logo html">
 
+          <h3>Avancement</h3>
           <div class="skillsJs">
-            <div class="Skill__progress" style="max-width: 100%; width: 45px;"></div>
+            <div class="Skill__progress" id="jetteMoiUnRegard"></div>
             <div class="Skill__bar"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  <!-- <div id="part4" class="bg-image-4">
+    <div class="topTitle">
+      <h1 id="text-white" class="text-white of">Veilles</h1>
+    </div>
+  </div> -->
 
   <footer class="bg-light text-center text-lg-start">
     <div class="container">
@@ -186,7 +215,7 @@
           <h5 class="text-uppercase">Contact</h5>
           <div class="foo-span" id="contact">
             <span> Envoyer un mail :<a href="mailto:yanis.legrand.1@gmail.com"> yanis.legrand.1@gmail.com</a></span>
-            <span> téléphone : 07 81 36 40 05 </span>
+            <span> Téléphone : 07 81 36 40 05 </span>
             <span> GitHub : <a href="https://github.com/yaperson">yaperson</a></span>
           </div>
           <h5 class="text-uppercase">Parametres</h5>
@@ -267,7 +296,5 @@
     }
 
   </script>
-
 </body>
-
 </html>

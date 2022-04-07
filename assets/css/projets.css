@@ -43,3 +43,44 @@
     text-align: center;
     margin : auto;
 }
+
+.element1-head {
+    max-width: 100%;
+  }
+  
+  .skillsJs {
+    max-width: 100%;
+  }
+  
+  .Skill__bar{
+    height: 6px;
+    background-color: #2e2e2e;
+  }
+  
+  .Skill__progress{
+    animation: apparition 2s;
+    background-color: rgb(53, 140, 211);
+    height: 6px;
+    position: absolute;
+  }
+  
+  #rss {
+    max-width: 100%;
+    width: 230px;
+  }
+  #WeekSong {
+    max-width: 100%;
+    width: 200px;
+  }
+  #feedBackSelf {
+    max-width: 100%;
+    width: 260px;
+  }
+  #jetteMoiUnRegard {
+    max-width: 100%;
+    width: 180px;
+  }
+  #ntList {
+    max-width: 100%;
+    width: 50px;
+  }

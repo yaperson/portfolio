@@ -396,7 +396,66 @@ h1 {
   max-width: 100%;
 }
 
+.main__btn{
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
 
+#btn5{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #3e3783;
+  box-shadow: inset rgba(0, 0, 0, 0.13) 0px 13px 16px 3px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 300px;
+  height: 60px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+#btn5:hover{
+  background-color: #4f44a1;
+  box-shadow: inset rgba(0, 0, 0, 0.13) 0px 13px 16px 3px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 300px;
+  height: 60px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.TxtBtn {
+  position: relative;
+  pointer-events: none;
+}
+#btn5::before{
+  --size: 0px;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  background: radial-gradient(circle closest-side , #39327a, transparent); 
+  width: var(--size);
+  height: var(--size);
+  transform: translate(-50%,-50%);
+  transition: 0.1s ease;
+}
+#btn5:hover::before{
+  --size: 500px;
+}
 
 @media (max-width: 1500px) {
   .bg-image-2, .bg-image-3, .bg-image-4 {

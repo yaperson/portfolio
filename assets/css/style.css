@@ -292,6 +292,7 @@ html {
   max-height: 200px;
   padding: 5px;
   transition: 0.2s;
+  margin: 5px;
 }
 .articlesList:hover {
   background-color: rgba(134, 149, 218, 0.26);
@@ -457,7 +458,7 @@ h1 {
   --size: 500px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 2000px) {
   .bg-image-2, .bg-image-3, .bg-image-4 {
     height: 100%;
     box-shadow: none;

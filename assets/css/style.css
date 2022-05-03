@@ -196,6 +196,7 @@ html {
   justify-content: space-evenly;
   margin: 20px;
 }
+
 .bloc1-element1 {
    display: flex;
    flex-direction: column;
@@ -206,6 +207,11 @@ html {
    background-color: #f1f1f1;
    border-radius: 15px;
    box-shadow:  0px 0px 13px 6px rgba(0, 0, 0, 0.233);
+}
+
+.element1-head {
+  display: flex;
+  flex-direction: column;
 }
 
 .bloc1-element2 {
@@ -458,6 +464,49 @@ h1 {
   --size: 500px;
 }
 
+.contentArticle {
+  width: 80%;
+  display: flex;
+}
+.contentArticle__part1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentArticle__part2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.listLink {
+  display: flex;
+  flex-direction: column;
+}
+
+.listLink__veil {
+  transition: 0.2s;
+}
+
+.listLink__veil:hover {
+  color: rgb(0, 0, 0);
+  transition: 0.2s;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.sepBar {
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  margin: 10px;
+}
+
 @media (max-width: 2000px) {
   .bg-image-2, .bg-image-3, .bg-image-4 {
     height: 100%;
@@ -478,6 +527,12 @@ h1 {
   }
   .bloc1 {
     flex-direction: column;
+  }
+  .bloc1-element1 {
+    margin-top: 10%;
+  }
+  .logo-topnav {
+    display: none;
   }
   .articles-container {
     flex-direction: column;

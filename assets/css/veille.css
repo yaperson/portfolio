@@ -62,8 +62,6 @@
 
   }
 
-
-
   .sideNav {
     position:fixed; 
     left: 20px;
@@ -82,3 +80,5 @@
       display: none;
     }
   }
+
+  

@@ -507,6 +507,11 @@ h1 {
   margin: 10px;
 }
 
+.animBack {
+  height: 100%;
+  position: absolute;
+}
+
 @media (max-width: 2000px) {
   .bg-image-2, .bg-image-3, .bg-image-4 {
     height: 100%;

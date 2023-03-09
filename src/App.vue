@@ -1,9 +1,11 @@
 <script>
 import navbar from './components/navbar.vue';
+import videoplayer from './components/videoplayer.vue';
 
 export default {
   components: {
-    navbar: navbar
+    navbar: navbar,
+    videoplayer: videoplayer
   }
 }
 </script>
@@ -14,7 +16,12 @@ export default {
   </header>
 
   <main>
-    <router-view />
+    <div class="view">
+      <router-view  />
+    </div>
+    <div class="video-container">
+      <videoplayer />
+    </div>
   </main>
 </template>
 
@@ -24,5 +31,7 @@ header {
   flex-direction: column;
   min-height: 20vh;
 }
-
+.view {
+  z-index: 100;
+}
 </style>

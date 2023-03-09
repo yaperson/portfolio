@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Name from "../components/Name.astro";
+import ProfilePicture from "../components/ProfilePicture.astro";
+import MY from "../components/background/MY.astro";
+import WORK from "../components/background/WORK.astro";
+import CONCEPTION from "../components/background/CONCEPTION.astro";
+---
+
+<BaseLayout>
+	<section class="decription" id="my">
+		<MY/>
+		<div class="container">
+
+			<div class="NameContainer">
+				<Name />
+			</div>
+			<div class="description__content">
+				<div class="card">
+					<h2 class="card__title">Me</h2>
+					<p>
+						Salut, moi c’est Yanis, développeur en apprentissage chez
+						Icodia. Actuellement je travaille pour aquiérir un bachelor
+						concepteur développeur d’application. Cepandant, cela ne me
+						suffira surement pas ! Objectif : devenir un expert, cela
+						dit sans grandes prétention car il ne faudrait pas se bruler
+						les ailes...
+					</p>
+				</div>
+				<ProfilePicture />
+			</div>
+		</div>
+	</section>
+	<section class="section" id="work">
+		<WORK/>
+	</section>
+	<section id="conception">
+		<CONCEPTION/>
+	</section>
+</BaseLayout>
+
+<style>
+	.container {
+		position: absolute;
+		top: 20vh;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.NameContainer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.description__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+</style>

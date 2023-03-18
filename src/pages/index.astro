@@ -1,21 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Name from "../components/Name.astro";
-import ProfilePicture from "../components/ProfilePicture.astro";
+
 import MY from "../components/background/MY.astro";
 import WORK from "../components/background/WORK.astro";
 import CONCEPTION from "../components/background/CONCEPTION.astro";
+
+import Name from "../components/Name.astro";
+import ProfilePicture from "../components/ProfilePicture.astro";
+
+import Techno from "../components/Techno.astro";
 ---
 
 <BaseLayout>
-	<section class="decription" id="my">
-		<MY/>
+	<section id="my">
 		<div class="container">
-
-			<div class="NameContainer">
-				<Name />
-			</div>
+			<MY/>
 			<div class="description__content">
+				<div class="NameContainer">
+					<Name />
+				</div>
 				<div class="card">
 					<h2 class="card__title">Me</h2>
 					<p>
@@ -31,22 +34,29 @@ import CONCEPTION from "../components/background/CONCEPTION.astro";
 			</div>
 		</div>
 	</section>
-	<section class="section" id="work">
-		<WORK/>
+	<section id="work">
+		<div class="container">
+			<WORK/>
+			<div class="work__content">
+				<Techno techno="vuejs" />
+				<img src="/icons/image 3.svg" alt="">
+				<img src="/icons/image 4.svg" alt="">
+				<img src="/icons/image 5.svg" alt="">
+				<img src="/icons/image 6.svg" alt="">
+				<img src="/icons/image 7.svg" alt="">
+				<img src="/icons/image 8.svg" alt="">
+			</div>
+		</div>
 	</section>
 	<section id="conception">
-		<CONCEPTION/>
+		<!-- <CONCEPTION/> -->
 	</section>
 </BaseLayout>
 
 <style>
 	.container {
-		position: absolute;
-		top: 20vh;
 		height: 100%;
 		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
 	}
 	.NameContainer {
 		display: flex;
@@ -54,7 +64,8 @@ import CONCEPTION from "../components/background/CONCEPTION.astro";
 		justify-content: center;
 	}
 
-	.description__content {
+	.description__content, .work__content {
+		position: absolute;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

@@ -1,6 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import ThemeIcon from "../components/ThemeIcon.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.scss";
 const pageTitle = "Portfolio Yanis Legrand";
 ---
@@ -26,10 +26,6 @@ const pageTitle = "Portfolio Yanis Legrand";
         <main>
             <slot />
         </main>
-        <footer>
-            <div class="theme__container">
-                <ThemeIcon />
-            </div>
-        </footer>
+        <Footer />
     </body>
 </html>

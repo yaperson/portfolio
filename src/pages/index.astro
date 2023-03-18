@@ -9,9 +9,12 @@ import Name from "../components/Name.astro";
 import ProfilePicture from "../components/ProfilePicture.astro";
 
 import Techno from "../components/Techno.astro";
+import BlogPost from "../components/BlogPost.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle="Portfolio yanis legrand">
 	<section id="my">
 		<div class="container">
 			<MY />
@@ -48,7 +51,21 @@ import Techno from "../components/Techno.astro";
 		</div>
 	</section>
 	<section id="conception">
-		<CONCEPTION/>
+		<div class="container">
+			<CONCEPTION />
+			<div class="conception__content">
+				{
+					allPosts.map((post) => (
+						<BlogPost
+						url={post.url}
+						title={post.frontmatter.title}
+						description={post.frontmatter.description}
+						tags={post.frontmatter.tags}
+						/>
+						))
+					}
+		</div>
+	</div>
 	</section>
 </BaseLayout>
 
@@ -64,7 +81,8 @@ import Techno from "../components/Techno.astro";
 	}
 
 	.description__content,
-	.work__content {
+	.work__content,
+	.conception__content {
 		position: absolute;
 		display: flex;
 		flex-wrap: wrap;
@@ -75,7 +93,7 @@ import Techno from "../components/Techno.astro";
 		flex-direction: column;
 	}
 
-	.work__content {
+	.work__content, .conception__content {
 		height: 100%;
 		width: 100%;
 		align-content: center;

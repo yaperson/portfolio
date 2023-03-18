@@ -14,7 +14,7 @@ import Techno from "../components/Techno.astro";
 <BaseLayout>
 	<section id="my">
 		<div class="container">
-			<MY/>
+			<MY />
 			<div class="description__content">
 				<div class="NameContainer">
 					<Name />
@@ -22,12 +22,12 @@ import Techno from "../components/Techno.astro";
 				<div class="card">
 					<h2 class="card__title">Me</h2>
 					<p>
-						Salut, moi c’est Yanis, développeur en apprentissage chez
-						Icodia. Actuellement je travaille pour aquiérir un bachelor
-						concepteur développeur d’application. Cepandant, cela ne me
-						suffira surement pas ! Objectif : devenir un expert, cela
-						dit sans grandes prétention car il ne faudrait pas se bruler
-						les ailes...
+						Salut, moi c’est Yanis, développeur en apprentissage
+						chez Icodia. Actuellement je travaille pour aquiérir un
+						bachelor concepteur développeur d’application.
+						Cepandant, cela ne me suffira surement pas ! Objectif :
+						devenir un expert, cela dit sans grandes prétention car
+						il ne faudrait pas se bruler les ailes...
 					</p>
 				</div>
 				<ProfilePicture />
@@ -36,14 +36,14 @@ import Techno from "../components/Techno.astro";
 	</section>
 	<section id="work">
 		<div class="container">
-			<WORK/>
+			<WORK />
 			<div class="work__content">
-				<Techno techno="vuejs" />
-				<Techno techno="javascript" />
-				<Techno techno="css" />
-				<Techno techno="csharp" />
-				<Techno techno="html" />
-				<Techno techno="php" />
+				<Techno class="work__content_icon" techno="vuejs" />
+				<Techno class="work__content_icon" techno="javascript" />
+				<Techno class="work__content_icon" techno="css" />
+				<Techno class="work__content_icon" techno="csharp" />
+				<Techno class="work__content_icon" techno="html" />
+				<Techno class="work__content_icon" techno="php" />
 			</div>
 		</div>
 	</section>
@@ -52,7 +52,7 @@ import Techno from "../components/Techno.astro";
 	</section>
 </BaseLayout>
 
-<style>
+<style lang="scss">
 	.container {
 		height: 100%;
 		display: flex;
@@ -63,10 +63,22 @@ import Techno from "../components/Techno.astro";
 		justify-content: center;
 	}
 
-	.description__content, .work__content {
+	.description__content,
+	.work__content {
 		position: absolute;
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		align-items: center;
+	}
+
+	.description__content {
+		flex-direction: column;
+	}
+
+	.work__content {
+		height: 100%;
+		width: 100%;
+		align-content: center;
+		justify-content: space-around;
 	}
 </style>

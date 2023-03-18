@@ -3,8 +3,9 @@ const { url, title, description, tags } = Astro.props;
 ---
 
 <div class="card postCard">
-    <h3>{title}</h3>
-    <p>{description} <a href={url}>Voir plus</a></p>
+    <h3 class="postCard__title">{title}</h3>
+    <p class="postCard__content">{description} <a href={url}>Voir plus</a></p>
+    <hr class="postCard__content">
     <div class="postCard__tagcontainer">
     {
         tags.map((tag) => (
@@ -24,10 +25,11 @@ const { url, title, description, tags } = Astro.props;
         justify-content: space-around;
     }
 
-    .postCard__title {
-        text-decoration: none;
-        color: grey;
+    .postCard__title, .postCard__content {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
     }
+
 
     .postCard__tag {
         color: var(--link-color-blue);

@@ -10,6 +10,7 @@ import ProfilePicture from "../components/ProfilePicture.astro";
 
 import Techno from "../components/Techno.astro";
 import BlogPost from "../components/BlogPost.astro";
+import NextSection from "../components/NextSection.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 ---
@@ -22,34 +23,45 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 				<div class="NameContainer">
 					<Name />
 				</div>
-				<div class="card">
-					<h2 class="card__title">Me</h2>
-					<p>
-						Salut, moi c’est Yanis, développeur en apprentissage
-						chez Icodia. Actuellement je travaille pour aquiérir un
-						bachelor concepteur développeur d’application.
-						Cepandant, cela ne me suffira surement pas ! Objectif :
-						devenir un expert, cela dit sans grandes prétention car
-						il ne faudrait pas se bruler les ailes...
-					</p>
+				<div class="description__content_my">
+					<div class="card">
+						<h2 class="card__title">Me</h2>
+						<p class="card__description">
+							Salut, moi c’est Yanis, développeur en apprentissage
+							chez Icodia. Actuellement je travaille pour aquiérir
+							un bachelor concepteur développeur d’application.
+							Cepandant, cela ne me suffira surement pas !
+							Objectif : devenir un expert, cela dit sans grandes
+							prétention car il ne faudrait pas se bruler les
+							ailes...
+						</p>
+					</div>
+					<ProfilePicture />
 				</div>
-				<ProfilePicture />
+				<NextSection anchor="work" />
 			</div>
 		</div>
 	</section>
 	<section id="work">
 		<div class="container">
 			<WORK />
-			<div class="work__content">
-				<h2>Work</h2>
-			</div>
-			<div class="work__content">
+			<div class="work__container">
+				<div class="card">
+					<h2 class="card__title">Work</h2>
+					<p class="card__description">
+						Voici une liste des langages/framework et techno que
+						j'ai été émené à utilisé (mes préférés).
+					</p>
+				</div>
+				<div class="work__content">
 					<Techno class="work__content_icon" techno="vuejs" />
 					<Techno class="work__content_icon" techno="javascript" />
 					<Techno class="work__content_icon" techno="css" />
 					<Techno class="work__content_icon" techno="csharp" />
 					<Techno class="work__content_icon" techno="html" />
 					<Techno class="work__content_icon" techno="php" />
+				</div>
+				<NextSection anchor="conception" />
 			</div>
 		</div>
 	</section>
@@ -60,15 +72,15 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 				{
 					allPosts.map((post) => (
 						<BlogPost
-						url={post.url}
-						title={post.frontmatter.title}
-						description={post.frontmatter.description}
-						tags={post.frontmatter.tags}
+							url={post.url}
+							title={post.frontmatter.title}
+							description={post.frontmatter.description}
+							tags={post.frontmatter.tags}
 						/>
-						))
-					}
+					))
+				}
+			</div>
 		</div>
-	</div>
 	</section>
 </BaseLayout>
 
@@ -76,7 +88,13 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 	.container {
 		height: 100%;
 		display: flex;
+		justify-content: center;
 	}
+
+	#conception .container {
+		align-items: center;
+	}
+
 	.NameContainer {
 		display: flex;
 		align-items: center;
@@ -84,22 +102,64 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 	}
 
 	.description__content,
-	.work__content,
+	.work__container,
 	.conception__content {
 		position: absolute;
+	}
+
+	.work__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.description__content,
+	.work__content,
+	.conception__content {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: space-evenly;
 	}
 
 	.description__content {
 		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		&_my {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.card {
+			max-width: 30em;
+		}
 	}
 
-	.work__content, .conception__content {
+	.work__content,
+	.conception__content {
 		height: 100%;
 		width: 100%;
 		align-content: center;
 		justify-content: space-around;
+	}
+
+	@media screen and (min-width: 700px) {
+		.description__content {
+			&_my {
+				flex-direction: row;
+				justify-content: space-around;
+				width: 80vw;
+			}
+		}
+
+		.nextSection {
+			display: none;
+		}
+
+		.work__container {
+			height: 80vh;
+		}
 	}
 </style>

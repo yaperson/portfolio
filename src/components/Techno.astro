@@ -1,57 +1,74 @@
 ---
 const { techno } = Astro.props;
-let randomLink = "";
-let description = "";
-let technoList = `[{
-        "name": "vuejs", 
-        "projectsList" : ["https://github.com/yaperson/vue-website", "https://github.com/yaperson/morpion-vuejs"],
-        "description" : "VueJs est un framework JS"
-    }, {
-        "name": "javascript", 
-        "projectsList": ["https://github.com/yaperson/jswebscrapping", "https://github.com/yaperson/Musique-web", "https://github.com/yaperson/SPA-RSS", "https://veille-yanislegrand.alwaysdata.net/"],
-        "description" : "Le JavaScript est une techno que j'apprécie ennormément :)"
-    }, {
-        "name": "css", 
-        "projectsList": ["https://github.com/yaperson/portfolio", "https://github.com/yaperson/Musique-web", "https://github.com/yaperson/scss"],
-        "description" : "Le CSS me permet d'exprimer ma créativitée sur le Web"
-    }, {
-        "name": "html", 
-        "projectsList": ["https://github.com/yaperson/portfolio", "https://github.com/yaperson/tutorial", "https://github.com/yaperson/Musique-web"],
-        "description" : "La base d'un dev web !"
-    }, {
-        "name": "php", 
-        "projectsList": ["https://github.com/yaperson/self-feedback1", "https://vente2roues.fr/"],
-        "description" : "J'en ai beaucoup fait durant mon BTS"
-    }, {
-        "name": "csharp", 
-        "projectsList": ["https://github.com/yaperson/Opportunity_Crawler/tree/Opportunity_crawler"],
-        "description" : "J'ai eu l'occasion d'en faire durant mon stage chez Netkoders"
-    }
-]`;
-
-technoList = JSON.parse(technoList);
-
-for (let elems in technoList) {
-    let elem = technoList[elems];
-    if (elem.name == techno) {
-        randomLink = elem.projectsList[Math.floor(Math.random() * elem.projectsList.length)];
-        description = elem.description
-    }
-}
 ---
 
-<div class="card work__content_icon">
-    <a target="_blank" href={`${randomLink}`}><img src={`/technos-icons/${techno}.svg`} alt="" /></a>
-    <p> { description } </p>
-</div>
+<techno-element data-techno={[techno]}>
+    <div class="card work__content_icon">
+        <a target="_blank"><img src={`/technos-icons/${techno}.svg`} alt="" /></a>
+        <p></p>
+    </div>
+</techno-element>
 
 <style>
-.work__content_icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 13em;
-    width: 13em;
-}
+    .work__content_icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 13em;
+        width: 13em;
+    }
 </style>
+
+<script>
+    class Techno extends HTMLElement {
+        constructor() {
+            super();
+            let randomLink = ""
+            let description = ""
+
+            let technoList = `[{
+                "name": "vuejs", 
+                "projectsList" : ["https://github.com/yaperson/vue-website", "https://github.com/yaperson/morpion-vuejs"],
+                "description" : "VueJs est un framework JS"
+            }, {
+                "name": "javascript", 
+                "projectsList": ["https://github.com/yaperson/jswebscrapping", "https://github.com/yaperson/Musique-web", "https://github.com/yaperson/SPA-RSS", "https://veille-yanislegrand.alwaysdata.net/"],
+                "description" : "Le JavaScript est une techno que j'apprécie ennormément :)"
+            }, {
+                "name": "css", 
+                "projectsList": ["https://github.com/yaperson/portfolio", "https://github.com/yaperson/Musique-web", "https://github.com/yaperson/scss"],
+                "description" : "Le CSS me permet d'exprimer ma créativitée sur le Web"
+            }, {
+                "name": "html", 
+                "projectsList": ["https://github.com/yaperson/portfolio", "https://github.com/yaperson/tutorial", "https://github.com/yaperson/Musique-web"],
+                "description" : "La base d'un dev web !"
+            }, {
+                "name": "php", 
+                "projectsList": ["https://github.com/yaperson/self-feedback1", "https://vente2roues.fr/"],
+                "description" : "J'en ai beaucoup fait durant mon BTS"
+            }, {
+                "name": "csharp", 
+                "projectsList": ["https://github.com/yaperson/Opportunity_Crawler/tree/Opportunity_crawler"],
+                "description" : "J'ai eu l'occasion d'en faire durant mon stage chez Netkoders"
+            }]`;
+
+            technoList = JSON.parse(technoList);
+
+            for (let elems in technoList) {
+                const elem = technoList[elems];
+                if (elem.name == this.dataset.techno) {
+                    randomLink = elem.projectsList[Math.floor(Math.random() * elem.projectsList.length)];
+                    description = elem.description;
+                }
+            }
+
+            const link = this.querySelector('a');
+            const descr = this.querySelector('p');
+
+            link.setAttribute('href', randomLink)
+            descr.innerHTML = description
+        }
+    }
+    customElements.define('techno-element', Techno)
+</script>

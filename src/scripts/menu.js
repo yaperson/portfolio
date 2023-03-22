@@ -6,7 +6,7 @@ if (window.screen.width > 800) {
         var distanceScrolled = document.documentElement.scrollTop
         let screenLog = document.querySelector('body');
 
-        if (window.screen.width < 768) {
+        if (window.screen.width < 1000) {
             if (distanceScrolled > 20) {
                 navbar.classList.add("navbar-glass")
             } else { navbar.classList.remove("navbar-glass") }

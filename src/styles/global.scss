@@ -168,3 +168,11 @@ section, .section {
     }
 }
 
+.tag {
+    color: var(--link-color-blue);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

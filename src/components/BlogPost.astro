@@ -10,7 +10,7 @@ const { url, title, description, tags } = Astro.props;
     {
         tags.map((tag) => (
             <span class="tag">
-                <a class="postCard__tag" href={`/tags/${tag}`}>#{tag}</a>
+                <a class="tag" href={`/tags/${tag}`}>#{tag}</a>
             </span>
         ))
     }
@@ -32,12 +32,5 @@ const { url, title, description, tags } = Astro.props;
     }
 
 
-    .postCard__tag {
-        color: var(--link-color-blue);
-        text-decoration: none;
 
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 </style>

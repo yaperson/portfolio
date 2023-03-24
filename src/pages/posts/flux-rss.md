@@ -6,13 +6,13 @@ description: 'Ce projet est une PWA qui récupère des flux RSS grâce à node.j
             cela me permet de réaliser une veille simple et efficace (tout dépend du flux rss choisi).'
 author: 'Yanis Legrand'
 image:
-    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
-    alt: 'The Astro logo with the word One.'
+    url: '/images/rssFeedJs.PNG' 
+    alt: 'Flus RSS image.'
 tags: ["NodeJS", "css", "HTML", "JavaScript"]
 ---
 
 
-# Titre du projet
+# Flux RSS en JavaScript avec rss-parser
 
 Ce projet est une PWA qui récupère des flux RSS grâce à node.js
 cela me permet de réaliser une veille simple et efficace (tout dépend du flux rss choisi).

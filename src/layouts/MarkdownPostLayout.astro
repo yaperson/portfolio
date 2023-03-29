@@ -40,7 +40,7 @@ const { frontmatter } = Astro.props;
         display: flex;
         align-items: center;
         flex-direction: column;
-        max-width: 60vw;
+        max-width: 80vw;
         margin: auto;
         
         h1, img {
@@ -55,13 +55,19 @@ const { frontmatter } = Astro.props;
         margin-top: 5em;
     }
     .post__image {
-        max-width: 60vw;
+        max-width: 80vw;
     }
 
     .post__content {
         display: flex;
         flex-direction: column;
-        max-width: 60vw;
+        max-width: 80vw;
         margin-bottom: 5em;
+    }
+
+	@media screen and (min-width: 700px) {
+        .post__content, .post__image, .post__container {
+            max-width: 60vw;
         }
+    }
 </style>

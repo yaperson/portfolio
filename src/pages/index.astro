@@ -96,6 +96,10 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 		justify-content: center;
 	}
 
+	#conception .container {
+		align-items: center;
+	}
+
 	.NameContainer {
 		display: flex;
 		align-items: center;
@@ -151,6 +155,10 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 	}
 
 	@media screen and (min-width: 700px) {
+		#conception .container {
+			align-items: baseline;
+		}
+
 		.description__content {
 			&_my {
 				flex-direction: row;

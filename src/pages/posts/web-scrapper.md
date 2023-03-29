@@ -7,7 +7,7 @@ author: 'Yanis Legrand'
 image:
     url: '/images/web-scraper/challenges-in-web-scraping.svg' 
     alt: 'Logo web scrapper'
-tags: ["scrapping", "web", "c#", ".NET"]
+tags: ["scrapping", "web", "CSharp", ".NET"]
 ---
 
 <style>
@@ -131,15 +131,15 @@ Voici les étapes que je me suis fixé pour faire mon scraper. Dans mon cas, l�
 Pour m’aider dans ce projet, j’ai suivi les documentation officielles de Microsoft, HTML A Agility Pack ainsi que des vidéos trouvés sur internet.
 
 
-Vidéo : https://www.youtube.com/watch?v=wbBuB7-BaXw
+[Vidéo](https://www.youtube.com/watch?v=wbBuB7-BaXw)
 
-Documentation HTML A Agility Pack : https://html-agility-pack.net/documentation
+[Documentation HTML A Agility Pack](https://html-agility-pack.net/documentation)
 
-Documentation Microsoft : https://docs.microsoft.com/fr-fr/dotnet/csharp/
+[Documentation Microsoft](https://docs.microsoft.com/fr-fr/dotnet/csharp/)
 
-Créer un DataTable : https://www.delftstack.com/fr/howto/csharp/create-datatable-in-csharp/ 
+[Créer un DataTable](https://www.delftstack.com/fr/howto/csharp/create-datatable-in-csharp/)
 
-Développé une application web en c# (MVC) : https://www.youtube.com/watch?v=-tZLsJEEqeU
+[Développé une application web en c# (MVC)](https://www.youtube.com/watch?v=-tZLsJEEqeU)
 
 ### Resultat
 

@@ -2,13 +2,13 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'FeedBack - Self'
 pubDate: 2023-03-18
-description: 'FeedBack - Self est un logiciel métier de notation du self. Il permet de récolter, grâce à un système de
+description: 'FeedBack - Self est un logiciel métier de notation de self. Il permet de récolter, grâce à un système de
             notation simple des avis.'
 author: 'Yanis Legrand'
 image:
     url: '/images/feedbackself.PNG' 
     alt: 'FeedBack self main page.'
-tags: ["symfony", "css", "HTML", "Twigg"]
+tags: ["symfony", "css", "HTML", "Twigg", "Web"]
 ---
 
 FeedBack - Self est un logiciel métier de notation du self. Il permet de récolter, grâce à un système de

@@ -29,6 +29,7 @@
 
     --transparent-white: #f4f4ff23;
     --transparent-grey: #54545746;
+    --color-glass: #ffffff71;
 }
 
 * {
@@ -93,7 +94,7 @@ section, .section {
         width: 600px;
         border-radius: 15px;
         margin-top: 20px;
-        background-color: #ffffff71;
+        background-color: var(--color-glass);
         backdrop-filter: blur(30px);
         transition: 0.2s;
         color: var(--color-light);
@@ -114,10 +115,18 @@ section, .section {
 }
 
 .icons__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     bottom: 0;
     right: 0;
     margin: 1em;
+}
+
+.link, .footer__nav_link {
+    color: var(--link-color-blue);
+    text-decoration: none;
 }
 
 .footer {
@@ -156,10 +165,7 @@ section, .section {
             width: 100%;
             padding-top: 0.5rem;
             
-            a {
-                color: var(--link-color-blue);
-                text-decoration: none;
-            }
+            
         }
         
         .litleIcon {
@@ -175,4 +181,8 @@ section, .section {
     &:hover {
         text-decoration: underline;
     }
+}
+
+.hidden {
+    display: none;
 }

@@ -28,12 +28,9 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 						<h2 class="card__title">Me</h2>
 						<p class="card__description">
 							Salut, moi c’est Yanis, développeur en apprentissage
-							chez Icodia. Actuellement je travaille pour aquiérir
-							un bachelor concepteur développeur d’application.
-							Cepandant, cela ne me suffira surement pas !
-							Objectif : devenir un expert, cela dit sans grandes
-							prétention car il ne faudrait pas se bruler les
-							ailes...
+							chez Icodia. Actuellement en <a href="https://www.francecompetences.fr/recherche/rncp/31678/" class="link" target="_blank" title="Lien vers la fiche france competence">bachelor concepteur développeur d’application</a>, 
+							je compte approfondir mes compétence affin de devenir <a href="https://www.francecompetences.fr/recherche/rncp/35584/" class="link" target="_blank" title="Lien vers la fiche france competence">expert en informatique et système d'information</a>. 
+							Objectif : enmagaziner plus d'experience grace à l'alternance et des connaissances grace au titre professionnel.
 						</p>
 					</div>
 					<ProfilePicture />
@@ -49,8 +46,8 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 				<div class="card">
 					<h2 class="card__title">Work</h2>
 					<p class="card__description">
-						Voici une liste des langages/framework et techno que
-						j'ai été émené à utilisé (mes préférés).
+						Voici une liste des langages/frameworks et technos que
+						j'ai été amené à utilisé (mes préférés).
 					</p>
 				</div>
 				<div class="work__content">
@@ -68,6 +65,13 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 	<section id="conception">
 		<div class="container">
 			<CONCEPTION />
+			<div class="conception__container">
+				<div class="card">
+					<h2 class="card__title">Conception</h2>
+					<p class="card__description">
+						Cette partie concerne différent projet qui me semblent intéréssant. Orientée "blog", vous y trouverez des posts sur certains concepts découvert durant ma veille, qui me semblent intéressants. 
+					</p>
+				</div>
 			<div class="conception__content">
 				{
 					allPosts.map((post) => (
@@ -80,6 +84,7 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 					))
 				}
 			</div>
+		</div>
 		</div>
 	</section>
 </BaseLayout>
@@ -103,11 +108,11 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 
 	.description__content,
 	.work__container,
-	.conception__content {
+	.conception__container {
 		position: absolute;
 	}
 
-	.work__container {
+	.work__container, .conception__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -120,6 +125,10 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-evenly;
+	}
+
+	.conception__container {
+		width: 80vw;
 	}
 
 	.description__content {

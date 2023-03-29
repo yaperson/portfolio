@@ -8,7 +8,7 @@ author: 'Yanis Legrand'
 image:
     url: '/images/feedbackself.PNG' 
     alt: 'FeedBack self main page.'
-tags: ["symfony", "css", "HTML"]
+tags: ["symfony", "css", "HTML", "Twigg"]
 ---
 
 FeedBack - Self est un logiciel métier de notation du self. Il permet de récolter, grâce à un système de

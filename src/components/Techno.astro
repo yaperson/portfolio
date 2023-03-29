@@ -6,10 +6,13 @@ const { techno } = Astro.props;
     <div class="card work__content_icon">
         <a target="_blank"><img src={`/technos-icons/${techno}.svg`} alt="" /></a>
         <p></p>
+        <span class="speechBubble hidden">
+            clique sur l'icone pour voir l'un de mes projet en {techno}
+        </span>
     </div>
 </techno-element>
 
-<style>
+<style lang="scss">
     .work__content_icon {
         display: flex;
         flex-direction: column;
@@ -17,6 +20,31 @@ const { techno } = Astro.props;
         justify-content: space-between;
         height: 13em;
         width: 13em;
+
+        .speechBubble {
+            text-align: center;
+            border: solid;
+            border-radius: 1em;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            user-select: none;
+            position: absolute;
+            animation: iscomming 0.2s ease-in-out ;
+            bottom: 0;
+            transition: 0.5s;
+            padding: 0.5em;
+            
+            &:active {
+                transition: 0.2s;
+                opacity: 0;
+                bottom: -2em;
+                position: absolute;
+            }
+            @keyframes iscomming {
+                0% {opacity: 0;bottom: -2em;
+                } 100% {opacity: 1; bottom: 0em;}
+            }
+        }
     }
 </style>
 
@@ -24,21 +52,21 @@ const { techno } = Astro.props;
     class Techno extends HTMLElement {
         constructor() {
             super();
-            let randomLink = ""
-            let description = ""
+            let randomLink = "";
+            let description = "";
 
             let technoList = `[{
                 "name": "vuejs", 
                 "projectsList" : ["https://github.com/yaperson/vue-website", "https://github.com/yaperson/morpion-vuejs"],
-                "description" : "VueJs est un framework JS"
+                "description" : "VueJs est un framework que j'aime pour ça simplicité à utiliser"
             }, {
                 "name": "javascript", 
                 "projectsList": ["https://github.com/yaperson/jswebscrapping", "https://github.com/yaperson/Musique-web", "https://github.com/yaperson/SPA-RSS", "https://veille-yanislegrand.alwaysdata.net/"],
-                "description" : "Le JavaScript est une techno que j'apprécie ennormément :)"
+                "description" : "L'un de mes languages préféré, j'en ai beaucoup fait chez Netkoders et personnelement :)"
             }, {
                 "name": "css", 
                 "projectsList": ["https://github.com/yaperson/portfolio", "https://github.com/yaperson/Musique-web", "https://github.com/yaperson/scss"],
-                "description" : "Le CSS me permet d'exprimer ma créativitée sur le Web"
+                "description" : "Il me permet d'exprimer ma créativitée, le scss encore plus"
             }, {
                 "name": "html", 
                 "projectsList": ["https://github.com/yaperson/portfolio", "https://github.com/yaperson/tutorial", "https://github.com/yaperson/Musique-web"],
@@ -46,7 +74,7 @@ const { techno } = Astro.props;
             }, {
                 "name": "php", 
                 "projectsList": ["https://github.com/yaperson/self-feedback1", "https://vente2roues.fr/"],
-                "description" : "J'en ai beaucoup fait durant mon BTS"
+                "description" : "J'en ai beaucoup fait durant mon BTS et chez Icodia"
             }, {
                 "name": "csharp", 
                 "projectsList": ["https://github.com/yaperson/Opportunity_Crawler/tree/Opportunity_crawler"],
@@ -58,17 +86,29 @@ const { techno } = Astro.props;
             for (let elems in technoList) {
                 const elem = technoList[elems];
                 if (elem.name == this.dataset.techno) {
-                    randomLink = elem.projectsList[Math.floor(Math.random() * elem.projectsList.length)];
+                    randomLink =
+                        elem.projectsList[
+                            Math.floor(Math.random() * elem.projectsList.length)
+                        ];
                     description = elem.description;
                 }
             }
 
-            const link = this.querySelector('a');
-            const descr = this.querySelector('p');
+            const link = this.querySelector("a");
+            const descr = this.querySelector("p");
+            const speechBubble = this.querySelector("span");
 
-            link.setAttribute('href', randomLink)
-            descr.innerHTML = description
+            link.setAttribute("href", randomLink);
+            descr.innerHTML = description;
+
+            setTimeout(() => {
+                speechBubble.classList.toggle("hidden");
+            }, Math.floor(Math.random() * 50000) + 5000);
+
+            speechBubble.addEventListener('click', ()=> {
+                speechBubble.classList.toggle("hidden");
+            })
         }
     }
-    customElements.define('techno-element', Techno)
+    customElements.define("techno-element", Techno);
 </script>

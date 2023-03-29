@@ -40,8 +40,12 @@ const { frontmatter } = Astro.props;
         display: flex;
         align-items: center;
         flex-direction: column;
-        max-width: 80vw;
+        max-width: 60vw;
         margin: auto;
+        
+        h1, img {
+            padding: 1em;
+        }
     }
     .introduction {
         display: flex;
@@ -49,19 +53,15 @@ const { frontmatter } = Astro.props;
         align-items: center;
         margin-bottom: 5em;
         margin-top: 5em;
-
-        h1, img {
-            padding: 1em;
-        }
     }
     .post__image {
-        max-width: 80vw;
+        max-width: 60vw;
     }
 
     .post__content {
         display: flex;
         flex-direction: column;
-        max-width: 80vw;
+        max-width: 60vw;
         margin-bottom: 5em;
-    }
-        </style>
+        }
+</style>

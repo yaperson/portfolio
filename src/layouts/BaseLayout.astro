@@ -14,6 +14,11 @@ const {pageTitle} = Astro.props;
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="black">
+        <meta name="apple-mobile-web-app-status-bar" content="white">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="apple-touch-icon" href="/pwa/icon-96.png">
         <title>{pageTitle}</title>
     </head>
     <body>
@@ -26,3 +31,4 @@ const {pageTitle} = Astro.props;
         <Footer />
     </body>
 </html>
+<script src="/src/scripts/app.js"></script>

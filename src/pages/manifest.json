@@ -1,0 +1,29 @@
+{
+    "name": "Portfolio - Yanis Legrand",
+    "short_name":"Yanis L",
+    "start_url": "https://r32-dev.fr/",
+    "display": "standalone",
+    "scope": "https://r32-dev.fr/",
+    "background_color":"#fefefd",
+    "theme_color":"#111111",
+    "orientation":"portrait-primary",
+    "icons":[
+        {
+            "src":"/pwa/icon-192.png",
+            "type":"image/png",
+            "sizes":"192x192"
+        },
+        {
+            "src":"/pwa/icon-192.png",
+            "type":"image/png",
+            "sizes":"192x192",
+            "purpose":"any maskable"
+        },
+        {
+            "src":"/pwa/icon-512.png",
+            "type":"image/png",
+            "sizes":"512x512"
+        }
+
+    ]
+}

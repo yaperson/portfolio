@@ -2,8 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Flux RSS'
 pubDate: 2023-03-18
-description: 'Ce projet est une PWA qui récupère des flux RSS grâce à rss-parser, un package node.js.
-            cela me permet d'optimiser ma veille.'
+description: 'Ce projet est une PWA qui récupère des flux RSS et optimiser ma veille grâce à rss-parser, un package node.js.'
 author: 'Yanis Legrand'
 image:
     url: '/images/rssFeedJs.PNG' 

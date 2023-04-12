@@ -106,12 +106,25 @@ section, .section {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     padding: 1em;
     margin: 1em;
     border: solid 1px;
     background-color: var(--transparent-white);
     backdrop-filter: blur(30px);
+}
+
+.button {
+    border-radius: 15px;
+    box-shadow: #1a1a1a4d 0 0 6px 0px;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: var(--color-dark);
+    text-decoration: none;
+    background-color: var(--color-glass);
+    width: fit-content;
 }
 
 .icons__container {
@@ -170,6 +183,12 @@ section, .section {
         
         .litleIcon {
             max-width: 35px;
+        }
+    }
+
+    &__contact {
+        a {
+            padding: 0.5rem;
         }
     }
 }

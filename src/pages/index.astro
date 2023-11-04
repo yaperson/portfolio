@@ -14,7 +14,6 @@ import NextSection from "../components/NextSection.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 ---
-
 <BaseLayout pageTitle="Portfolio yanis legrand">
 	<section id="my">
 		<div class="container">
@@ -27,10 +26,7 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 					<div class="card">
 						<h2 class="card__title">Me</h2>
 						<p class="card__description">
-							Salut, moi c’est Yanis, développeur en apprentissage
-							chez Icodia. Actuellement en <a href="https://www.francecompetences.fr/recherche/rncp/31678/" class="link" target="_blank" title="Lien vers la fiche france competence">bachelor concepteur développeur d’application</a>, 
-							je compte approfondir mes compétence affin de devenir <a href="https://www.francecompetences.fr/recherche/rncp/35584/" class="link" target="_blank" title="Lien vers la fiche france competence">expert en informatique et système d'information</a>. 
-							Objectif : emmagasiner plus d'expérience ainsi que des connaissances grâce à l'alternance et au titre professionnel.
+							Salut, moi c’est Yanis, développeur en apprentissage chez Ekolis. J'aime beaucoup apprendre et partager de nouvelles connaissances :)
 						</p>
 						<a href='/#contact' class="button">Me contacter</a>
 					</div>
@@ -91,6 +87,10 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 </BaseLayout>
 
 <style lang="scss">
+	#conception {
+		margin-top: 20vh;
+	}
+
 	.container {
 		height: 100%;
 		display: flex;
@@ -155,6 +155,12 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 		justify-content: space-around;
 	}
 	
+	@media screen and (min-width: 450px) {
+		#conception {
+			margin-top: 0vh;
+		}
+	}
+
 	@media screen and (min-width: 700px) {
 		#conception .container {
 			align-items: baseline;

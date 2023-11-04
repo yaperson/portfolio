@@ -16,7 +16,7 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 ---
 <BaseLayout pageTitle="Portfolio yanis legrand">
 	<section id="my">
-		<div class="container">
+		<div class="mainContainer">
 			<MY />
 			<div class="description__content">
 				<div class="NameContainer">
@@ -37,7 +37,7 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 		</div>
 	</section>
 	<section id="work">
-		<div class="container">
+		<div class="mainContainer">
 			<WORK />
 			<div class="work__container">
 				<div class="card">
@@ -60,7 +60,7 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 		</div>
 	</section>
 	<section id="conception">
-		<div class="container">
+		<div class="mainContainer">
 			<CONCEPTION />
 			<div class="conception__container">
 				<div class="card">
@@ -91,13 +91,13 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 		margin-top: 20vh;
 	}
 
-	.container {
+	.mainContainer {
 		height: 100%;
 		display: flex;
 		justify-content: center;
 	}
 
-	#conception .container {
+	#conception .mainContainer {
 		align-items: center;
 	}
 
@@ -162,7 +162,7 @@ const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft);
 	}
 
 	@media screen and (min-width: 700px) {
-		#conception .container {
+		#conception .mainContainer {
 			align-items: baseline;
 		}
 

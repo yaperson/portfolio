@@ -1,0 +1,24 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+import "../styles/global.scss"
+---
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+    <title>@storyblok/astro</title>
+  </head>
+  <body class='container mx-auto'>
+    <header class="navContainer">
+      <Navbar />
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+</html>

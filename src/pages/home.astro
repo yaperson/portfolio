@@ -1,0 +1,16 @@
+---
+import { useStoryblokApi } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import StoryBlokLayout from '../layouts/StoryBlokLayout.astro'
+ 
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get('cdn/stories/home', {
+  version: 'draft',
+})
+ 
+const story = data.story
+---
+
+<StoryBlokLayout pageTitle="Portfolio yanis legrand">
+    <StoryblokComponent blok={story.content} />
+</StoryBlokLayout>

@@ -1,4 +1,8 @@
-# Astro Starter Kit: Minimal
+# Astro + tailwindcss + Storyblok
+
+integration tailwindcss and Storyblok into Astro, for testing purposes.
+
+## Astro Starter Kit: Minimal
 
 ```
 npm create astro@latest -- --template minimal

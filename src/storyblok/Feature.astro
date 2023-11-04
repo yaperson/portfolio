@@ -1,0 +1,11 @@
+---
+import { storyblokEditable } from '@storyblok/astro'
+ 
+const { blok } = Astro.props
+ ---
+  
+<div {...storyblokEditable(blok)} class='w-full p-12 bg-[#f7f6fd] rounded-[5px] text-center'>
+  <img src={blok.image} class="rounded"/>
+  <h3 class='text-2xl text-[#1d243d] font-bold'>{blok.name}</h3>
+  <a href=`{blok.link_to_article}`>{'see more'}</a>
+</div>
